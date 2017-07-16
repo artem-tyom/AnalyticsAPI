@@ -25,10 +25,10 @@ API should have following end-points
   2. Retention                 
   
 ##### 4.2 API format
-  API should be implemented according to REST format.
+  API should be implemented according to REST rules.
 ###### 4.2.1 DAU
-Api accepts list of dates in dd/mm/yyyy format and returns DAU for that days.
+API accepts list of dates in dd/mm/yyyy format and returns DAUs for that days.
 ###### 4.2.2 Retention
-Api accepts two arguments. One is retention type. Accepted values are : "Day1", "Day7", "Day40".
+API accepts two arguments. One is retention type. Accepted values are : "Day1", "Day7", "Day40".
 The second one is date in dd/mm/yyyy format. Retention should be calculated starting from that day.
 Returns the retention for that day.
