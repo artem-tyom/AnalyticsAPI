@@ -1,9 +1,7 @@
 # Analytics API project description
 
 ## Project Overview 
-
-  Implement an Web service providing an API for accessing daily active users (DAU) and other analytic metrics. 
-  
+Implement an Web service which provides an HTTP API for acessing some analytic metrics.   
 ### Objective
 Import provided data into database and implement an web service which will calculate and send DAU via some defined API.
 ### Technical Specifications
@@ -20,28 +18,18 @@ Struts2
   
 #### 3. Api Protocol
 
-At this moment Api consists from single end-point giving access to DAU based on input arguments. 
+##### 3.1 End Points
 
-  I.e  https://analytics-api.com/api?command=dau&args={INPUT_ARGS}
-
-
-INPUT_ARGS is JSON object.
-
-
-```javascript
-//INPUT
-{
-app_id : some_unique_id,
-dateFrom : 10/01/2017  //start date in  dd/mm/yyyy format,
-dateTo : 10/02/2017
-}
-//OUTPUT
-{
-date1 : 212312, //DAU1
-date2 : 645754, //DAU2
-…
-dateN : 96796 //DAUn
-}
-
-//Where  dateFrom <= N <= dateTo
-```
+At this moment Api consists from following end-points
+  1. DAU (Daily active users)  
+  2. Retention                 
+  
+##### 3.1 API format
+  
+  API should be implemented according to REST format.
+  ###### 3.2.1 DAU
+    Api accepts list of dates in dd/mm/yyyy format and returns DAU for that days.
+  ###### 3.2.1 Retention
+    Api accpets two arguments. One is retention type. Values are : "Day1", "Day7", "Day40".
+    The second one is date in dd/mm/yyyy format. Retention should be calculated starting from that day.
+    Returns the retention for that day.
