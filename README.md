@@ -11,8 +11,12 @@ Application should have Presentation, Business and Data Access Layers.
 Any relation database.
 
 #### 2. Provided Data format
-TODO....
-
+There are 2 csv files in input_data.rar archive.
+##### 1. load_data.csv contains client id and one request time per day(if there is at least one request during that day)
+	client_id and time (request time)
+##### 2. install_date.csv  
+	client_id and install_date
+  
 #### 3. Framework stack
 Spring framework,
 Struts2
